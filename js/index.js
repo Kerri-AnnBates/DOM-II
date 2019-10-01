@@ -1,6 +1,6 @@
 // Your code goes here
 
-// scroll event.
+// 1. scroll event.
 const header = document.querySelector('header');
 let scrollPosition = 0;
 
@@ -14,7 +14,7 @@ document.addEventListener('scroll', (e) => {
     }
 });
 
-// Load event.
+// 2. Load event.
 const mainNav = document.querySelector('nav');
 const mainLogo = document.querySelector('.logo-heading');
 
@@ -26,7 +26,7 @@ window.addEventListener('load', (e) => {
     mainLogo.classList.add('slide-from-left');
 });
 
-// Mouseover and mouseleave event.
+// 3. Mouseover and mouseleave event.
 const mainImage = document.querySelector('.intro img');
 
 mainImage.addEventListener('mouseover', (e) => {
@@ -38,7 +38,7 @@ mainImage.addEventListener('mouseleave', (e) => {
     e.target.style.transition = 'all 1s';
 });
 
-// wheel event.
+// 4. wheel event.
 const firstContentImage = document.querySelectorAll('.img-content img')[0];
 let rotatedeg = 0;
 
@@ -54,7 +54,7 @@ firstContentImage.addEventListener('wheel', (e) => {
     console.log('wheel fired');
 });
 
-// double click.
+// 5. & 6. double click & animationend event.
 const firstDestination = document.querySelectorAll('.content-pick .destination')[0]
 const doubleClickBtn = firstDestination.children[2];
 console.log(doubleClickBtn)
@@ -66,3 +66,21 @@ doubleClickBtn.addEventListener('animationend', (e) => {
     console.log('Transition ended');
     e.target.classList.remove('watch-me-bounce');
 });
+
+// 7. resize event.
+const heading = document.querySelectorAll('h2');
+window.addEventListener('resize', (e) => {
+    
+    heading.forEach(header => {
+        header.style.color = 'blue';
+    });
+});
+
+// 8.kydown event.
+const modal = document.querySelector('.modal');
+document.addEventListener('keydown', (e) => {
+    if(e.key === 'g') {
+        console.log(e)
+        modal.classList.toggle('show-modal');
+    }
+})
