@@ -23,3 +23,15 @@ window.addEventListener('load', (e) => {
 window.addEventListener('load', (e) => {
     mainLogo.classList.add('slide-from-left');
 });
+
+// Mouseover and mouseleave event.
+const mainImage = document.querySelector('.intro img');
+console.log(mainImage)
+mainImage.addEventListener('mouseover', (e) => {
+    e.target.style.transform = 'scale(1.4)';
+    e.target.style.transition = 'all 1s';
+});
+mainImage.addEventListener('mouseleave', (e) => {
+    e.target.style.transform = 'scale(1)';
+    e.target.style.transition = 'all 1s';
+});
