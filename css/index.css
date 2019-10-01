@@ -180,6 +180,7 @@ img {
   background: #FFFFFF;
   border-bottom: 2px dashed #C0C0C0;
   position: fixed;
+  z-index: 1;
 }
 .main-navigation .nav-container {
   height: 100%;
@@ -365,4 +366,21 @@ img {
 .home .content-pick .destination .btn:hover {
   background: #FFFFFF;
   color: #17A2B8;
+}
+.home .content-pick .destination .btn.watch-me-bounce {
+  animation: bounce 2s;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(20px);
+  }
+  30% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
