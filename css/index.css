@@ -194,6 +194,13 @@ img {
     padding-top: 10px;
   }
 }
+.main-navigation .nav-container .logo-heading {
+  margin-left: -1000px;
+}
+.main-navigation .nav-container .logo-heading.slide-from-left {
+  margin-left: 0;
+  transition: all 2s;
+}
 @media (max-width: 500px) {
   .main-navigation .nav-container .logo-heading {
     font-size: 3rem;
@@ -203,6 +210,11 @@ img {
   width: 350px;
   display: flex;
   justify-content: space-evenly;
+  margin-right: -1000px;
+}
+.main-navigation .nav-container .nav.slide-from-right {
+  margin-right: 0;
+  transition: all 2s;
 }
 @media (max-width: 500px) {
   .main-navigation .nav-container .nav {

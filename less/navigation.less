@@ -18,6 +18,13 @@
     }
 
     .logo-heading {
+      margin-left: -1000px;
+
+      &.slide-from-left {
+        margin-left: 0;
+        transition: all 2s;
+      }
+
       @media @mobile {
         font-size: 3rem;
       }
@@ -27,6 +34,12 @@
       width: 350px;
       display: flex;
       justify-content: space-evenly;
+      margin-right: -1000px;
+
+      &.slide-from-right {
+        margin-right: 0;
+        transition: all 2s;
+      }
 
       @media @mobile {
         width: 100%;
