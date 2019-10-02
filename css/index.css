@@ -180,6 +180,7 @@ img {
   background: #FFFFFF;
   border-bottom: 2px dashed #C0C0C0;
   position: fixed;
+  z-index: 1;
 }
 .main-navigation .nav-container {
   height: 100%;
@@ -194,6 +195,13 @@ img {
     padding-top: 10px;
   }
 }
+.main-navigation .nav-container .logo-heading {
+  margin-left: -1000px;
+}
+.main-navigation .nav-container .logo-heading.slide-from-left {
+  margin-left: 0;
+  transition: all 2s;
+}
 @media (max-width: 500px) {
   .main-navigation .nav-container .logo-heading {
     font-size: 3rem;
@@ -203,6 +211,11 @@ img {
   width: 350px;
   display: flex;
   justify-content: space-evenly;
+  margin-right: -1000px;
+}
+.main-navigation .nav-container .nav.slide-from-right {
+  margin-right: 0;
+  transition: all 0.5s;
 }
 @media (max-width: 500px) {
   .main-navigation .nav-container .nav {
@@ -229,6 +242,10 @@ img {
 .home .intro {
   padding: 90px 0 10px;
   border-bottom: 2px dashed #C0C0C0;
+}
+.home .intro .img-container {
+  overflow: hidden;
+  width: 100%;
 }
 .home .intro img {
   max-width: 100%;
@@ -349,4 +366,41 @@ img {
 .home .content-pick .destination .btn:hover {
   background: #FFFFFF;
   color: #17A2B8;
+}
+.home .content-pick .destination .btn.watch-me-bounce {
+  animation: bounce 2s;
+}
+.modal {
+  position: absolute;
+  background: crimson;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+}
+.modal.show-modal {
+  display: block;
+}
+.modal p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 9rem;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(20px);
+  }
+  30% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

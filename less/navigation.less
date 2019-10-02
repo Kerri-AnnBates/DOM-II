@@ -4,6 +4,7 @@
   background: @main-bg;
   border-bottom: 2px dashed @navigation-border;
   position: fixed;
+  z-index: 1;
 
   .nav-container {
     height: 100%;
@@ -18,6 +19,13 @@
     }
 
     .logo-heading {
+      margin-left: -1000px;
+
+      &.slide-from-left {
+        margin-left: 0;
+        transition: all 2s;
+      }
+
       @media @mobile {
         font-size: 3rem;
       }
@@ -27,6 +35,12 @@
       width: 350px;
       display: flex;
       justify-content: space-evenly;
+      margin-right: -1000px;
+
+      &.slide-from-right {
+        margin-right: 0;
+        transition: all .5s;
+      }
 
       @media @mobile {
         width: 100%;

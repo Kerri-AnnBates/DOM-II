@@ -4,6 +4,10 @@
     padding: 90px 0 10px;
     border-bottom: 2px dashed @navigation-border;
 
+    .img-container {
+      overflow: hidden;
+      width: 100%;
+    }
     img {
       max-width: 100%;
       height: auto;
@@ -107,8 +111,52 @@
       }
       
       .btn {
-        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);     
+        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);
+
+        &.watch-me-bounce {
+          animation: bounce 2s;
+        }
       }
     }
   }
 }// home
+
+.modal {
+  position: absolute;
+  background: crimson;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+
+  &.show-modal {
+    display: block;
+  }
+  p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 9rem;
+        transform: translate(-50%, -50%);
+        color: white;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(20px);
+  }
+
+  30% {
+    transform: translateY(0px);
+  }
+
+  60% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
